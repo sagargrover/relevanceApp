@@ -49,7 +49,11 @@ dictConfig = {
             'level': 'DEBUG',
             'propagate': False
         },
-
+        'flask_logger': {
+            'handlers': ['access'],
+            'level': 'INFO',
+            'propagate': False
+        },
         'error_logger': {
             'handlers': ['error'],
             'level': 'ERROR',

@@ -11,6 +11,4 @@ class RelevanceModel:
 
     def get_validity(self, text):
         embeddings = self.parse_data(text)
-        return {
-            "is_valid": str(self.classifier.predict(embeddings)[0])
-        }
+        return self.classifier.predict(embeddings)[0]
