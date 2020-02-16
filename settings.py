@@ -1,0 +1,73 @@
+dictConfig = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s Module:%(module)s --- %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(asctime)s - %(message)s'
+        }
+    },
+    'handlers': {
+        'default': {
+            'level': 'DEBUG',
+            'formatter': 'verbose',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': 'logs/debug.log',
+            'maxBytes': 100000000,
+            'backupCount': 1
+        },
+        'access': {
+            'level': 'INFO',
+            'formatter': 'simple',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': 'logs/access_log.log',
+            'maxBytes': 100000000,
+            'backupCount': 1
+        },
+        'error': {
+            'level': 'ERROR',
+            'formatter': 'verbose',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': 'logs/error.log',
+            'maxBytes': 100000000,
+            'backupCount': 1
+        },
+        'ab_test': {
+            'level': 'INFO',
+            'formatter': 'verbose',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': 'logs/ab_test.log',
+            'maxBytes': 100000000,
+            'backupCount': 1
+        }
+    },
+    'loggers': {
+        'my_logger': {
+            'handlers': ['default'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+        'aiohttp.access': {
+            'handlers': ['access'],
+            'level': 'INFO',
+            'propagate': False
+        },
+        'aiohttp.server': {
+            'handlers': ['error'],
+            'level': 'ERROR',
+            'propagate': False
+        },
+        'error_logger': {
+            'handlers': ['error'],
+            'level': 'ERROR',
+            'propagate': False
+        },
+        'ab_test_logger':{
+            'handlers': ['ab_test'],
+            'level': 'INFO',
+            'propagate': False
+        }
+    }
+}

@@ -1,0 +1,14 @@
+resource_dir: "/Users/300018290/PycharmProjects/relevanceApp/resources/"
+
+sql_db  : "tweets.db"
+
+csv_file_name : "social_media_clean_text.csv"
+
+pickle:
+  preprocess_model_file: "embedding.pkl"
+  classifier_model_file: "classifier.pkl"
+
+host:
+  name: 'preprod'
+
+debug: TRUE
