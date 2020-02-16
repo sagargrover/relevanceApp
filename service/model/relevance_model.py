@@ -1,4 +1,4 @@
-from pipeline.preprocessing import parse_text
+from utils.parser import parse_text
 
 
 class RelevanceModel:

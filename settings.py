@@ -44,21 +44,12 @@ dictConfig = {
         }
     },
     'loggers': {
-        'my_logger': {
+        'debug_logger': {
             'handlers': ['default'],
             'level': 'DEBUG',
             'propagate': False
         },
-        'aiohttp.access': {
-            'handlers': ['access'],
-            'level': 'INFO',
-            'propagate': False
-        },
-        'aiohttp.server': {
-            'handlers': ['error'],
-            'level': 'ERROR',
-            'propagate': False
-        },
+
         'error_logger': {
             'handlers': ['error'],
             'level': 'ERROR',

@@ -1,5 +1,4 @@
-apt-get update
-apt -y install software-properties-common
-apt-get -y install supervisor
-pip install -r requirements.txt
-
+service supervisor start
+export PYTHONPATH="${PYTHONPATH}:/relevanceApp/"
+supervisorctl start relevanceApp:*
+#while true; do sleep 1; done

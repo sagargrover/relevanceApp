@@ -2,10 +2,10 @@ import csv
 import yaml
 config = yaml.load(open('config.yml'))
 
-from utils.db_sqlite import get_db_connector
+from utils.db_sqlite import SQLiteConnector
 
 
-conn = get_db_connector()
+conn = SQLiteConnector.get_db_connector(config["db"]["db_name"])
 cur = conn.cursor()
 
 

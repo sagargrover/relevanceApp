@@ -62,12 +62,12 @@ def get_heath_check():
 
 @app.route('/health/bringIntoLB', methods=['GET'])
 def bring_into_lb():
-    return bringIntoLB(request)
+    return bringIntoLB()
 
 
 @app.route('/health/bringOutOfLB', methods=['GET'])
 def bring_out_of_lb():
-    return bringOutOfLB(request)
+    return bringOutOfLB()
 
 
 

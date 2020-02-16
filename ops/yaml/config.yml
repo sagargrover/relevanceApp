@@ -1,10 +1,6 @@
-resource_dir: "/Users/300018290/PycharmProjects/relevanceApp/resources/"
+resource_dir: "/relevanceApp/resources/"
 
-db:
-  type: "sqlite"
-  db_name: "tweets.db"
-  table_name: "data"
-
+sql_db  : "tweets.db"
 
 csv_file_name : "social_media_clean_text.csv"
 
