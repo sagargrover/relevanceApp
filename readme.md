@@ -4,8 +4,19 @@ Provides validity for given text
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Sample URL(on gcloud)
+```
 
+```
+
+Swagger documentation
+```
+```
+
+HLD -
+```
+https://docs.google.com/document/d/1j0B70r2YgVEk9hI47v_uKoxew9RxldACrHSbCVtbAGw/edit?usp=sharing
+```
 ### Installation
 
 1. Go to project folder
