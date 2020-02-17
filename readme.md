@@ -4,13 +4,19 @@ Provides validity for given text
 
 ## Getting Started
 
-Sample URL(on gcloud)
-```
-
-```
-
 Swagger documentation
 ```
+https://v4-bg6nis3tdq-de.a.run.app/apidocs
+```
+
+Sample URL(on gcloud)
+```
+curl --location --request POST 'https://v4-bg6nis3tdq-de.a.run.app/api/v1/getRelevance' \
+--header 'Content-Type: application/json' \
+--header 'x-myntra-abtest: v1=personalised' \
+--data-raw '{
+    "text": "gnition knock (detonation) sensor senso fits 01 06 bmw 325ci 2 5l l6"
+}'
 ```
 
 HLD -

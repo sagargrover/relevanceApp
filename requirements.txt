@@ -5,6 +5,7 @@ certifi==2019.11.28
 chardet==3.0.4
 Click==7.0
 decorator==4.4.1
+flasgger==0.9.4
 Flask==1.1.1
 get==2019.4.13
 gunicorn==20.0.4
@@ -17,7 +18,9 @@ itsdangerous==1.1.0
 jedi==0.16.0
 Jinja2==2.11.1
 joblib==0.14.1
+jsonschema==3.2.0
 MarkupSafe==1.1.1
+mistune==0.8.4
 mock==3.0.5
 more-itertools==8.2.0
 nltk==3.4.5
@@ -35,6 +38,7 @@ public==2019.4.13
 py==1.8.1
 Pygments==2.5.2
 pyparsing==2.4.6
+pyrsistent==0.15.7
 pytest==5.3.5
 python-dateutil==2.8.1
 pytz==2019.3

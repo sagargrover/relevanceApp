@@ -1,13 +1,18 @@
+#Libraries
 from flask import Flask, request, jsonify
 import yaml
 import json
 import logging.config
+from flasgger import Swagger
 
+
+#Local imports
 from settings import dictConfig
 from utils.health_check import bringIntoLB, bringOutOfLB, poll
 from service.handler.reco_handler import RecoHandler
 
 app = Flask(__name__)
+Swagger(app)
 config = yaml.load(open('config.yml'))
 
 logging.config.dictConfig(dictConfig)
@@ -20,6 +25,31 @@ reco_handler = RecoHandler(resources_dir)
 
 @app.route('/api/v1/getRelevance', methods=['POST'])
 def get_relevance():
+    """check text validity
+    ---
+    parameters:
+      - name: body
+        in: body
+        schema:
+          $ref: '#/definitions/body'
+        required: true
+    definitions:
+      body:
+        type: object
+        properties:
+          text:
+            type: string
+      response:
+        type: object
+        properties:
+          is_valid:
+            type: string
+    responses:
+      200:
+        description: validity of text
+        schema:
+          $ref: '#/definitions/response'
+    """
     response = {
         "is_valid": "-1"
     }
