@@ -8,8 +8,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installation
 
-What things you need to install the software and how to install them
-
 1. Go to project folder
 ```
 Change resource_dir path in config.yml
@@ -30,21 +28,21 @@ virtualenv --python=/usr/bin/python3.7 venv
 gunicorn service.app:app -b 0.0.0.0:8080 --workers 1 -t=300
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+If everything works, this should return output
+```
+curl --location --request POST 'https://v3-bg6nis3tdq-de.a.run.app/api/v1/getRelevance' \
+--header 'Content-Type: application/json' \
+--header 'x-myntra-abtest: v1=personalised' \
+--data-raw '{
+    "text": "gnition knock (detonation) sensor senso fits 01 06 bmw 325ci 2 5l l6"
+}'
+```
 
 ## Running the tests
 
 
 ```
 python -m unittest discover -s tests/ -p '*_test.py'
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
 ```
 
 ## Deployment
@@ -57,8 +55,8 @@ gcloud builds submit --tag gcr.io/relevantgrab/v1
 
 ## Built With
 
-* [FLask](https://www.palletsprojects.com/p/flask/) - The web framework used
-* [pip] - Dependency Management
+* [Flask](https://www.palletsprojects.com/p/flask/) - The web framework used
+* pip - Dependency Management
 
 
 ## Authors
