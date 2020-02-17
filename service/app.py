@@ -13,8 +13,9 @@ config = yaml.load(open('config.yml'))
 logging.config.dictConfig(dictConfig)
 error_logger = logging.getLogger('error_logger')
 flask_logger = logging.getLogger('flask_logger')
+resources_dir = config["resource_dir"]
 
-reco_handler = RecoHandler()
+reco_handler = RecoHandler(resources_dir)
 
 
 @app.route('/api/v1/getRelevance', methods=['POST'])
@@ -23,6 +24,7 @@ def get_relevance():
         "is_valid": "-1"
     }
     try:
+
         validity, status_code = reco_handler.get_relevance(request)
         response["is_valid"] = str(validity)
     except Exception as e:
@@ -52,5 +54,5 @@ def bring_out_of_lb():
 
 
 
-app.run(host='0.0.0.0', port=6501, debug=config["debug"])
+#app.run(host='0.0.0.0', port=6501, debug=config["debug"])
 flask_logger.info("Ready to accept")

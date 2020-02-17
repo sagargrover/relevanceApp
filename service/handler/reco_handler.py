@@ -13,12 +13,11 @@ config = yaml.load(open('config.yml'))
 logging.config.dictConfig(dictConfig)
 error_logger = logging.getLogger('error_logger')
 flask_logger = logging.getLogger('flask_logger')
-resources_dir = config["resource_dir"]
 
 
 
 class RecoHandler:
-    def __init__(self):
+    def __init__(self, resources_dir):
         classifier_file = resources_dir + config["pickle"]["classifier_model_file"]
         processor_file = resources_dir + config["pickle"]["preprocess_model_file"]
 
