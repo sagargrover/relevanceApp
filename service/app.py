@@ -24,7 +24,6 @@ def get_relevance():
         "is_valid": "-1"
     }
     try:
-
         validity, status_code = reco_handler.get_relevance(request)
         response["is_valid"] = str(validity)
     except Exception as e:

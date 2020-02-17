@@ -10,10 +10,8 @@ config = yaml.load(open('config.yml'))
 
 class TestInputPipeline(unittest.TestCase):
     def setUp(self):
-
         super(TestInputPipeline, self).setUp()
         self.input_pipe = InputPipeline()
-
 
 
     def test_invalid_db(self):

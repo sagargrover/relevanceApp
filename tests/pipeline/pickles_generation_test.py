@@ -27,9 +27,6 @@ class TestPipeline(unittest.TestCase):
         self.assertEquals(path.exists(self.classifier_file_path), True)
         self.assertEquals(path.exists(self.processor_file_path), True)
 
-    def check_if_output_generated(self):
-
-        pass
 
     def test(self):
         self.test_pickles_exist()
@@ -37,7 +34,6 @@ class TestPipeline(unittest.TestCase):
 
     def tearDown(self):
         super(TestPipeline, self).tearDown()
-        self.reco_handler = None
 
 
 if __name__ == '__main__':
