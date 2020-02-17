@@ -4,10 +4,8 @@ Provides validity for given text
 
 ## Getting Started
 
-Swagger documentation
-```
-https://v4-bg6nis3tdq-de.a.run.app/apidocs
-```
+[Swagger documentation](https://v4-bg6nis3tdq-de.a.run.app/apidocs)
+
 
 Sample URL(on gcloud)
 ```
