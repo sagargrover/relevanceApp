@@ -17,10 +17,8 @@ curl --location --request POST 'https://v4-bg6nis3tdq-de.a.run.app/api/v1/getRel
 }'
 ```
 
-HLD -
-```
-https://docs.google.com/document/d/1j0B70r2YgVEk9hI47v_uKoxew9RxldACrHSbCVtbAGw/edit?usp=sharing
-```
+[HLD](https://docs.google.com/document/d/1j0B70r2YgVEk9hI47v_uKoxew9RxldACrHSbCVtbAGw/edit?usp=sharing)
+
 ### Installation
 
 1. Go to project folder
