@@ -1,6 +1,6 @@
 # Relevance App
 
-Provided validity for given text
+Provides validity for given text
 
 ## Getting Started
 
