@@ -28,14 +28,20 @@ virtualenv --python=/usr/bin/python3.7 venv
 gunicorn service.app:app -b 0.0.0.0:8080 --workers 1 -t=300
 ```
 
-If everything works, this should return output
+If everything works, this curl
 ```
-curl --location --request POST 'https://v3-bg6nis3tdq-de.a.run.app/api/v1/getRelevance' \
+curl --location --request POST 'https://localhost:8080/api/v1/getRelevance' \
 --header 'Content-Type: application/json' \
 --header 'x-myntra-abtest: v1=personalised' \
 --data-raw '{
     "text": "gnition knock (detonation) sensor senso fits 01 06 bmw 325ci 2 5l l6"
 }'
+```
+should return
+```
+{
+    "is_valid": "1"
+}
 ```
 
 ## Running the tests
