@@ -60,6 +60,7 @@ def get_relevance():
         error_logger.error("Exception occurred", exc_info=True)
         return jsonify(response), 500
     error_logger.error(str(response))
+    flask_logger.info("Returned request for " + str(request.data))
     return jsonify(response), status_code
 
 

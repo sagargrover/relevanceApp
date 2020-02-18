@@ -11,7 +11,6 @@ Sample URL(on gcloud)
 ```
 curl --location --request POST 'https://v4-bg6nis3tdq-de.a.run.app/api/v1/getRelevance' \
 --header 'Content-Type: application/json' \
---header 'x-myntra-abtest: v1=personalised' \
 --data-raw '{
     "text": "gnition knock (detonation) sensor senso fits 01 06 bmw 325ci 2 5l l6"
 }'
@@ -20,6 +19,8 @@ curl --location --request POST 'https://v4-bg6nis3tdq-de.a.run.app/api/v1/getRel
 [HLD](https://docs.google.com/document/d/1j0B70r2YgVEk9hI47v_uKoxew9RxldACrHSbCVtbAGw/edit?usp=sharing)
 
 ### Installation
+
+Please use python3.7 for this
 
 1. Go to project folder
 ```
@@ -55,6 +56,11 @@ should return
 {
     "is_valid": "1"
 }
+```
+
+To generate new pickles
+```
+python pipeline/generate_pickles.py
 ```
 
 ## Running the tests
